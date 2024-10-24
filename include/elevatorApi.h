@@ -1,16 +1,25 @@
 #ifndef ELEVATOR_API
 #define ELEVATOR_API
 
+#include <stdbool.h>
+
 typedef struct s_elevatorOut
 {
   int nbrButtonPressed;
   int buttonPressed[20]; // contien les différents étages demander dans un assenseur
 } t_elevatorOut;
 
+typedef struct s_caller
+{
+  int floor;
+  bool goUp;
+  bool goDown;
+} t_caller;
+
 typedef struct s_elevatorCall
 {
   int nbrCallingFloor;
-  int callingFloor[20]; // contien le étage ayant appeler un assenceur
+  t_caller callingFloor[50]; // contien le étage ayant appeler un assenceur
 } t_elevatorCall;
 
 typedef struct s_eflevator

@@ -1,14 +1,16 @@
 #include "game.h"
 
-void movePeople(t_elevator *elevator,
+int  movePeople(t_elevator *elevator,
 		t_floor *floor)
 {
   t_people temp;
+  int peopleDeliver = 0;
 
   for (int i = 0; i < elevator->nbrPeople; i++)
     if (elevator->peoples[i].targetFloor == elevator->pos)
       {
 	temp = removePeopleFromElevator(elevator, i);
+	peopleDeliver++;
 	i--;
       }
   for (int i = 0; i < floor->nbrPeople; i++)
@@ -18,5 +20,6 @@ void movePeople(t_elevator *elevator,
 	addPeopleToElevator(elevator, temp);
 	i--;
       }
+  return (peopleDeliver);
 }
 

@@ -3,14 +3,14 @@ nbrElevator = 3
 {Elevator
 	[
 	size = 5
-	speed = 0.02
+	speed = 0.03
 	],
 	[
 	size = 5
-	speed = 0.02
+	speed = 0.03
 	],
 	[
 	size = 3
-	speed = 0.02
+	speed = 0.03
 	]	
 }

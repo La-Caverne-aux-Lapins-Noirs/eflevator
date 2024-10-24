@@ -4,24 +4,29 @@ t_bunny_response display(void *data)
 {
   t_game *game = (t_game *)data;
   
+  t_bunny_color color;
+  color.argb[RED_CMP] = 30;
+  color.argb[BLUE_CMP] = 30;
+  color.argb[GREEN_CMP] = 30;
+  color.argb[ALPHA_CMP] = 255;
+
   game->vertex.lenght = 8;
   game->vertex.vertex[0].pos.x = 0;
   game->vertex.vertex[0].pos.y = 0;
-  game->vertex.vertex[0].color = BLACK;
+  game->vertex.vertex[0].color = color.full;
   game->vertex.vertex[1].pos.x = game->pix->buffer.width / 4;
   game->vertex.vertex[1].pos.y = 0;
-  game->vertex.vertex[1].color = BLACK;
+  game->vertex.vertex[1].color = color.full;
   game->vertex.vertex[2].pos.x = game->pix->buffer.width / 4;
   game->vertex.vertex[2].pos.y = game->pix->buffer.height;
-  game->vertex.vertex[2].color = BLACK;
+  game->vertex.vertex[2].color = color.full;
   game->vertex.vertex[3].pos.x = 0;
   game->vertex.vertex[3].pos.y = game->pix->buffer.height;
-  game->vertex.vertex[3].color = BLACK;
-  t_bunny_color color;
+  game->vertex.vertex[3].color = color.full;
+
   color.argb[RED_CMP] = 125;
   color.argb[BLUE_CMP] = 125;
   color.argb[GREEN_CMP] = 125;
-  color.argb[ALPHA_CMP] = 255;
   
   game->vertex.vertex[4].pos.x = game->pix->buffer.width / 4;
   game->vertex.vertex[4].pos.y = 0;

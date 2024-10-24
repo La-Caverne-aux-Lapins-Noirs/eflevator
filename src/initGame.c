@@ -2,7 +2,8 @@
 
 bool initGame(t_game *game,
 	      char *level,
-	      char *elevator)
+	      char *elevator,
+	      bool isFast)
 {
   t_bunny_configuration *newConf;
 
@@ -26,12 +27,24 @@ bool initGame(t_game *game,
     }
   game->pictElev = bunny_load_picture("res/elevators.jpg");
   game->pictPeople = bunny_load_picture("res/waiting.png");
-  if ((game->level = bunny_load_configuration(BC_DABSIC, level, NULL)) == NULL)
+  game->modeType = 0;
+  if (strcmp(level, "bigGroup") == 0)
+    game->modeType = 2;
+  else if (strcmp(level, "smallGroup") == 0)
+    game->modeType = 1;
+  else if ((game->level = bunny_load_configuration(BC_DABSIC, level, NULL)) == NULL)
     {
       printf("FAILED LOAD LEVEL\n");
       return (false);
     }
-  bunny_configuration_getf(game->level, &game->maxLevelEvent, "nbrEvent");
+  if (game->modeType == 0)
+    bunny_configuration_getf(game->level, &game->maxLevelEvent, "nbrEvent");
+  else
+    game->maxLevelEvent = 0;
+  game->mul = 1;
+  if (isFast)
+    game->mul = 40;
+  game->nbrPeopleTransport = 0;
   game->levelProgress = 0;
   game->levelTime = 0;
   game->pix = bunny_new_picture(1920, 900);
