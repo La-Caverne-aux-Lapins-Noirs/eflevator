@@ -11,7 +11,7 @@ typedef struct s_elevatorOut
 
 typedef struct s_caller
 {
-  int floor;
+  int floor; // numero de l'étage
   bool goUp;
   bool goDown;
 } t_caller;
@@ -19,14 +19,14 @@ typedef struct s_caller
 typedef struct s_elevatorCall
 {
   int nbrCallingFloor;
-  t_caller callingFloor[50]; // contien le étage ayant appeler un assenceur
+  t_caller callingFloor[50]; // contien les étage ayant appeler un assenceur
 } t_elevatorCall;
 
 typedef struct s_eflevator
 {
   int targetedFloor;
-  const double pos;
-  const int size;
+  const double pos; // position en étage
+  const int size; // capacité maximal de personne transporté
   const int nbrPeopleIn;
   const char data[528];
 } t_eflevator;
