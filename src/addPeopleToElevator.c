@@ -5,7 +5,7 @@ void addPeopleToElevator(t_elevator *elevator,
 {
   if (elevator->nbrPeople >= 31)
     return;
-  for (int i = 0; i < elevator->nbrPeople; i++)
+  for (int i = elevator->nbrPeople -1; i >= 0 ; i--)
     elevator->peoples[i + 1] = elevator->peoples[i];
   elevator->peoples[0] = people;
   elevator->nbrPeople++;

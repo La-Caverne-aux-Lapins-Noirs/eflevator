@@ -1,0 +1,79 @@
+nbrEvent = 13
+{Level
+	[
+	event = "spawn"
+	floor = 0
+	number = 2
+	dest = 2
+	timer = 4
+	],
+	[
+	event = "spawn"
+	floor = 1
+	number = 1
+	dest = 0
+	timer = 8
+	],
+	[
+	event = "wait"
+	time = 3
+	],
+	[
+	event = "spawn"
+	floor = 2
+	number = 3
+	dest = 1
+	timer = 3
+	],
+	[
+	event = "wait"
+	time = 1
+	],
+	[
+	event = "spawn"
+	floor = 1
+	number = 2
+	dest = 0
+	timer = 4
+	],
+	[
+	event = "wait"
+	time = 3
+	],
+	[
+	event = "spawn"
+	floor = 0
+	number = 2
+	dest = 3
+	timer = 6
+	],
+	[
+	event = "wait"
+	time = 6
+	],
+	[
+	event = "spawn"
+	floor = 3
+	number = 1
+	dest = 1
+	timer = 4
+	],
+	[
+	event = "spawn"
+	floor = 2
+	number = 1
+	dest = 3
+	timer = 8
+	],
+	[
+	event = "wait"
+	time = 3
+	],
+	[
+	event = "spawn"
+	floor = 1
+	number = 3
+	dest = 2
+	timer = 3
+	]
+}

@@ -9,7 +9,7 @@ int  movePeople(t_elevator *elevator,
   for (int i = 0; i < elevator->nbrPeople; i++)
     if (elevator->peoples[i].targetFloor == elevator->pos)
       {
-	temp = removePeopleFromElevator(elevator, i);
+        temp = removePeopleFromElevator(elevator, i);
 	peopleDeliver++;
 	i--;
       }
@@ -17,8 +17,11 @@ int  movePeople(t_elevator *elevator,
     if (elevator->nbrPeople < elevator->size)
       {
 	temp = removePeopleFromFloor(floor, i);
-	addPeopleToElevator(elevator, temp);
-	i--;
+	if (temp.targetFloor != -1 && temp.timeLeft != -1)
+	  {
+	    addPeopleToElevator(elevator, temp);
+	    i--;
+	  }
       }
   return (peopleDeliver);
 }

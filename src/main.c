@@ -18,6 +18,8 @@ int main(int nbrIn,
   bunny_set_key_response(keys);
   bunny_set_loop_main_function(mainLoop);
   bunny_set_display_function(display);
-  bunny_loop(game.win, 30, &game);
-  return (0);
+  int out =  bunny_loop(game.win, 30, &game);
+  if (out == 1)
+    return (0);
+  return (1);
 }

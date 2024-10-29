@@ -16,7 +16,7 @@ t_bunny_response mainLoop(void *data)
 	{
 	  printf("YOU LOSE!\n");
 	  printf("People transported %d\n", game->nbrPeopleTransport);
-	  return (EXIT_ON_SUCCESS);
+	  return (EXIT_FAILURE);
 	}
       if (progressLevel(game, game->modeType))
 	{

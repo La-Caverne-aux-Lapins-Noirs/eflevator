@@ -1,0 +1,16 @@
+nbrFloor = 9
+nbrElevator = 3
+{Elevator
+	[
+	size = 6
+	speed = 0.03
+	],
+	[
+	size = 6
+	speed = 0.03
+	],
+	[
+	size = 4
+	speed = 0.03
+	]
+}

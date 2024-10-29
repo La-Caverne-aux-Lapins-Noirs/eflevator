@@ -1,16 +1,12 @@
-nbrFloor = 10
-nbrElevator = 3
+nbrFloor = 6
+nbrElevator = 2
 {Elevator
 	[
-	size = 5
+	size = 4
 	speed = 0.03
 	],
 	[
-	size = 5
+	size = 4
 	speed = 0.03
-	],
-	[
-	size = 3
-	speed = 0.03
-	]	
+	]
 }
