@@ -55,7 +55,7 @@ bool progressLevel(t_game *game,
 	      people.targetFloor = rand() % game->nbrFloors;
 	      while (people.targetFloor == floor)
 		people.targetFloor = rand() % game->nbrFloors;
-	      people.timeLeft = 8 + (2 * abs(floor - people.targetFloor)) + rand() % 4;
+	      people.timeLeft = 12 + (2 * abs(floor - people.targetFloor)) + rand() % 4;
 	    }
 	  else if (spawnigType == 2)
 	    {
@@ -64,7 +64,7 @@ bool progressLevel(t_game *game,
 	      people.targetFloor = rand() % game->nbrFloors;
 	      while (people.targetFloor == floor)
 		people.targetFloor = rand() % game->nbrFloors;
-	      people.timeLeft = 8 + (2 * abs(floor - people.targetFloor)) + rand() % 4;
+	      people.timeLeft = 10 + (2 * abs(floor - people.targetFloor)) + rand() % 4;
 	    }
 	  for (int i = 0; i < number; i++)
 	    addPeopleToFloor(&game->floors[floor], people);
