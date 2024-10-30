@@ -43,7 +43,7 @@ bool initGame(t_game *game,
     game->maxLevelEvent = 0;
   game->mul = 1;
   if (isFast)
-    game->mul = 40;
+    game->mul = 80;
   game->nbrPeopleTransport = 0;
   game->levelProgress = 0;
   game->levelTime = 0;

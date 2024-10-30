@@ -53,5 +53,5 @@ nbrEvent = 9
 	number = 1
 	dest = 3
 	timer = 8
-	],
+	]
 }
